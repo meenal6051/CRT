@@ -9,6 +9,6 @@ struct triangle{
 
 
 int main(){
-    // this is the first the trinagle push 
+    // this is the first the triangle push 
 
 }
