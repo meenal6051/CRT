@@ -1,0 +1,35 @@
+## We Know that the parameter of a constructor can be any type except that of the class to which it belongs.
+
+    class Test
+    {
+       int a;
+         public:
+        Test(Test obj){
+
+
+       }
+    };
+-->> Is Invalid!!
+
+** but a constructor can accept a refrence to its own class as a parameter. thus:
+
+   class Test
+     {
+         int a;
+         public:
+         Test(Test &obj){
+
+
+         }
+    };
+
+## Is Valid &n called the "Copy Construtor"
+-> so a Copy Constructor is used to declare and initialize an object from another object.
+    Test o2(o1);             OR               Test o2 = o1;
+
+** A copy constructor takes a refrence to an object of the same class as itself  as an argument.
+** The process of initializing through a copy constructor is k/a copy initialization.
+** Note this --
+           abc o2;
+           o2 = o1;
+    Legal but noy invoke the copy constructor.
