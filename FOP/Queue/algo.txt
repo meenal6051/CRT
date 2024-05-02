@@ -1,0 +1,17 @@
+// Algo to insert an element in a circular queue
+
+step 1: If front = 0 and rear = max - 1
+           write "overflow"
+           goto step 4
+        [end of if]
+
+step 2: if front = -1 and rear = -1
+           set front = rear = 0
+        else if rear = maxx - 1 and front != 0
+           set rear = 0
+        else
+           set rear = rear+1
+        [end of if]
+
+step 3: Set QUEUE[rear] = val
+step 4: EXIT
