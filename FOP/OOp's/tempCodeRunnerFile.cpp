@@ -1,1 +1,2 @@
-static int cm = 7500;
+protected: 
+	// int d;
