@@ -18,24 +18,30 @@ void print(int arr[], int n){
     }
 }
 
-int solve(int arr[], int n){
+float median(int *arr, int n){
+    sort(arr, arr+n);
     if(n % 2 == 0){
-        int median = (n+1)/2;
-        cout<<median;
+        return (arr[(n/2) - 1] + arr[(n/2)] /2.0);
     }
     else{
-        int median = n/2;
-        cout<<median;
+        return arr[n/2];
     }
 }
 
+void solve(){
+    int n;
+    cin>>n;
+    int a[n];
+    input_arr(a,n);
+    cout<<median(a,n)<<"\n";
+    print(a,n);
+}
+
 int main(){
-    int size;
-    cin>>size;
-    int arr[size];
-
-    input_arr(arr, size);
-    solve(arr,size);
-    // print(arr, size);
-
+    
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    
+    solve();
 }

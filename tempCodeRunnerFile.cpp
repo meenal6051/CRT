@@ -1,1 +1,1 @@
-    // printf("%d %d %d\n", --*p, *p++, ++*p);
+#include <bits/stdc++.h>
