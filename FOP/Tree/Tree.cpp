@@ -40,22 +40,4 @@ int main()
     Node *root = dummyTree();
     cout<<root->data<<endl;
 }
-// int maxdepth(node *node){
-//     if(node == NULL){
-//         return 0;
-//     }
-//     else{
-//         int ldepth = maxdepth(node->left);
-//         int rdepth = maxdepth(node->right);
-
-//         if(ldepth > rdepth){
-//             return (ldepth+1);
-//         }
-//         else{
-//             return (rdepth+1);
-//         }
-//     }
-// }
-
-
 
