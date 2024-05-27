@@ -40,12 +40,24 @@ int main(){
     root->left = newNode(1);
     root->right = newNode(2);
     root->left->left = newNode(3);
+
     root->left->right = newNode(4);
+
     root->right->left = newNode(5);
+
     root->right->right = newNode(6);
+
     root->left->left->left = newNode(7);
     root->left->left->right = newNode(8);
 
+    root->left->right->left = newNode(9);
+    root->left->right->right = newNode(10);
+
+    root->right->left->left = newNode(11);
+    root->right->left->right = newNode(12);
+
+    root->right->right->left = newNode(13);
+    root->right->right->right = newNode(14);
 
     cout<< "Height of tree is " << maxdepth(root);
     return 0;
