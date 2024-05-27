@@ -1,5 +1,5 @@
 #include<iostream>
-#include <stdexcept>
+#include<stdexcept>
 using namespace std;
 #define n 100
 
@@ -47,10 +47,10 @@ class stack{
 
 int main(){
     stack st;
-    st.push(1);
-    st.push(2);
-    st.push(3);
-    st.push(4);
+    st.push(62);
+    st.push(00);
+    st.push(38);
+    st.push(60);
     cout<<st.Top()<<endl;
     st.pop();
     st.pop();
