@@ -31,16 +31,6 @@ Node *dummyTree()
     return root;
 }
 
-// int InOrder(Node *currentNode){
-//     if(currentNode == NULL){
-//         return 0;
-//     }
-//     InOrder(currentNode->left);
-//     cout << currentNode->data << " ";
-//     InOrder(currentNode->right);
-
-// }
-
 void bfs(Node *root){
     if(root == NULL){
         return;
@@ -75,8 +65,6 @@ int main()
 {
     Node *root = dummyTree();
     cout << root->data << endl;
-    // InOrder(root);
-    // cout << endl;
 
     bfs(root);
     cout << endl;
