@@ -7,7 +7,6 @@ class Node
     int data;
     Node *left;
     Node *right;
-
 };
 
 Node* newNode(int item)
@@ -17,7 +16,6 @@ Node* newNode(int item)
     temp->left = NULL;
     temp->right = NULL;
     return temp;
-
 }
 
 int depth(Node *current_node){

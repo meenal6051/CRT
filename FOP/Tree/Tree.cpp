@@ -7,7 +7,6 @@ class Node
     int data;
     Node *left;
     Node *right;
-
 };
 
 Node* newNode(int item)
@@ -16,7 +15,6 @@ Node* newNode(int item)
     temp->data = item;
     temp->left = temp->right = NULL;
     return temp;
-
 }
 
 //classes and struct m access specifier is the difference 

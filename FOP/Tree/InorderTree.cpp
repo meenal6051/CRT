@@ -7,7 +7,6 @@ class Node
     int data;
     Node *left;
     Node *right;
-
 };
 
 Node* newNode(int item)
@@ -16,7 +15,6 @@ Node* newNode(int item)
     temp->data = item;
     temp->left = temp->right = NULL;
     return temp;
-
 }
 
 Node *dummyTree()
@@ -39,7 +37,6 @@ int InOrder(Node *currentNode){
     InOrder(currentNode->left);
     cout << currentNode->data << " ";
     InOrder(currentNode->right);
-
 }
 
 int main()
@@ -47,6 +44,5 @@ int main()
     Node *root = dummyTree();
     cout<<root->data<<endl;
     InOrder(root);
-
 }
 

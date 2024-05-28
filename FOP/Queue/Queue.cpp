@@ -8,7 +8,6 @@ class queue{
     int front;
     int rear;
 
-
     public:
     queue(){
         arr = new int[n];
@@ -58,6 +57,5 @@ int main(){
    q.pop();
    q.pop();
    cout<<q.empty()<<endl;
-
-    return 0;
+   return 0;
 }
