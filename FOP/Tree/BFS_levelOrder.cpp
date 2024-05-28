@@ -51,7 +51,6 @@ void bfs(Node *root){
 
     while(!q.empty()){
         Node *current = q.front();
-        q.pop();
 
         cout<< current->data << " ";
 
@@ -62,6 +61,8 @@ void bfs(Node *root){
         if(current->right != NULL){
             q.push(current->right);
         }
+
+        q.pop();
     }
 }
 
