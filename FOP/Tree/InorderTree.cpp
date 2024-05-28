@@ -19,9 +19,6 @@ Node* newNode(int item)
 
 }
 
-//classes and struct m access specifier is the difference 
-//struct k acess kr skte h khi bhi 
-
 Node *dummyTree()
 {
     Node *root = newNode(0);
@@ -35,9 +32,21 @@ Node *dummyTree()
     return root;
 }
 
+int InOrder(Node *currentNode){
+    if(currentNode == NULL){
+        return 0;
+    }
+    InOrder(currentNode->left);
+    cout << currentNode->data << " ";
+    InOrder(currentNode->right);
+
+}
+
 int main()
 {
     Node *root = dummyTree();
     cout<<root->data<<endl;
+    InOrder(root);
+
 }
 

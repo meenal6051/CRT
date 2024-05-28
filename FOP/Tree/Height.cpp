@@ -14,10 +14,18 @@ Node* newNode(int item)
 {
     Node* temp = new Node;
     temp->data = item;
-    temp->left = temp->right = NULL;
+    temp->left = NULL;
+    temp->right = NULL;
     return temp;
 
-};
+}
+
+int depth(Node *current_node){
+    if(!current_node){
+        return 0;
+    }
+    return 1 + max(depth(current_node->left),depth(current_node->right));
+}
 
 //classes and struct m access specifier is the difference 
 //struct k acess kr skte h khi bhi 
@@ -39,23 +47,9 @@ int main()
 {
     Node *root = dummyTree();
     cout<<root->data<<endl;
+    cout<<"Height of the tree is " << depth(root) << endl;
 }
-// int maxdepth(node *node){
-//     if(node == NULL){
-//         return 0;
-//     }
-//     else{
-//         int ldepth = maxdepth(node->left);
-//         int rdepth = maxdepth(node->right);
 
-//         if(ldepth > rdepth){
-//             return (ldepth+1);
-//         }
-//         else{
-//             return (rdepth+1);
-//         }
-//     }
-// }
 
 
 
