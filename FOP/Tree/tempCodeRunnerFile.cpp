@@ -1,2 +1,1 @@
-   cout<<root->data<<endl;
-    InOrder(root);
+cout << "\n";

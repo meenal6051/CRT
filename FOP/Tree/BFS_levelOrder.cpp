@@ -50,6 +50,9 @@ void bfs(Node *root){
     q.push(root);
 
     while(!q.empty()){
+        int n = q.size();
+        for(int i = 0; i < n; i++){
+            
         Node *current = q.front();
 
         cout<< current->data << " ";
@@ -63,7 +66,9 @@ void bfs(Node *root){
         }
 
         q.pop();
-    }
+        }
+    cout << "\n";
+}
 }
 
 int main()
