@@ -26,7 +26,16 @@ int depth(Node *current_node){
 }
 
 int diameter(Node *current_node){
-    
+    if(!current_node){
+        return 0;
+    }
+    int left_height = depth(current_node->left);
+    int right_height = depth(current_node->right);
+
+    int left_diameter = diameter(current_node->left);
+    int right_diameter = diameter(current_node->right);
+
+    return max(left_height + right_height + 1 , max(left_diameter, right_diameter));
 }
 
 Node *dummyTree()
@@ -47,4 +56,5 @@ int main()
     Node *root = dummyTree();
     cout<<root->data<<endl;
     cout<<"Diameter of the tree is " << depth(root->left) + depth(root->right) + depth(root) << endl;
+    return 0;
 }
