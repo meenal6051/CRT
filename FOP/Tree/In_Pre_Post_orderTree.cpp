@@ -30,6 +30,15 @@ Node *dummyTree()
     return root;
 }
 
+int preOrder(Node *currentNode){
+    if(currentNode == NULL){
+        return 0;
+    }
+    cout << currentNode->data << " ";
+    preOrder(currentNode->left);
+    preOrder(currentNode->right);
+}
+
 int InOrder(Node *currentNode){
     if(currentNode == NULL){
         return 0;
@@ -39,10 +48,23 @@ int InOrder(Node *currentNode){
     InOrder(currentNode->right);
 }
 
+int postOrder(Node *currentNode){
+    if(currentNode == NULL){
+        return 0;
+    }
+    postOrder(currentNode->left);
+    postOrder(currentNode->right);
+    cout << currentNode->data << " ";
+}
+
 int main()
 {
     Node *root = dummyTree();
     cout<<root->data<<endl;
+    preOrder(root);
+    cout<<"\n";
     InOrder(root);
+    cout<<"\n";
+    postOrder(root);
 }
 
